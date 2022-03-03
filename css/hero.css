@@ -1,0 +1,219 @@
+.hero{
+	overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.hero__circle{
+	position: absolute;
+	top: -600px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1200px;
+	height: 800px;
+	background: radial-gradient(rgba(255,255,255,1) , rgba(255,255,255,.2));
+	border-radius: 50%;
+	box-shadow: 
+	0 0 10px .2px rgba(255,255,255, .1),
+	0 0 10px .2px rgba(255,255,255, .2),
+	0 0 10px .2px rgba(255,255,255, .3),
+	0 0 10px .2px rgba(255,255,255, .4),
+	0 0 10px .2px rgba(255,255,255, .5),
+	0 0 10px .2px rgba(255,255,255, .6);
+}
+.hero__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 75px;
+	z-index: 100;
+}
+.hero__title{
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero__title h2:nth-of-type(1){
+    opacity: 0; /*with animation is setted to 1*/
+    animation: hero-animation1 2s ease-in-out forwards;
+}
+.hero__title h2:nth-of-type(2){
+    opacity: 0; /*with animation is setted to 1*/
+    animation: hero-animation2 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.hero__button{
+    z-index: 100;
+    opacity: 0;
+    animation: hero-animation3 2s linear forwards;
+    animation-delay: 3s;
+}
+.hero ul{
+    opacity: 0;
+    animation: hero-animation3 2s linear forwards;
+    animation-delay: 3.5s;
+}
+.hero ul li:hover{
+    transform: scale(1.2);
+}   
+
+@keyframes hero-animation1{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) scale(.6);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes hero-animation2{
+    0%{
+        opacity: 0;
+        transform: translateX(50%) scale(.6);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes hero-animation3{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+
+.ilustration1{
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    opacity: 0;
+    animation: hero-animation3 2s linear forwards;
+    z-index: 50;
+}
+
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	background-color: transparent;
+}
+
+.loader .face{
+	position: absolute;
+	border:  2px solid #121212;
+}
+
+.loader .face.face1{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #090909;
+	box-shadow: 0 0 10px rgba(0,0,0,1);
+	border-radius: 50%;
+	border-left: 2px solid #ffff00;
+	border-top: 2px solid #ffff00;
+	animation: animate 3s linear infinite;
+}
+
+
+.loader .face.face2{
+	top: 30px;
+	left: 30px;
+	right: 30px;
+	bottom: 30px;
+	background-color: #090909;
+	box-shadow: 0 0 10px rgba(0,0,0,1);
+	border-radius: 50%;
+	border-right: 2px solid #03a9f4;
+	border-bottom: 2px solid #03a9f4;
+	animation: animate 3s linear reverse infinite;
+}
+
+
+.loader .face .circle{
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 50%;
+	width: 50%;
+	height: 2px;
+	transform-origin: left;
+}
+
+.loader .face.face1 .circle{
+	transform: rotate(-45deg);
+}
+
+
+.loader .face.face2 .circle{
+	transform: rotate(-45deg);
+}
+
+.loader .face .circle:before{
+	content: " ";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	top: -4px;
+	right: -6px;
+}
+
+.loader .face.face1 .circle:before{
+	background-color: #ffff00;
+	box-shadow: 0 0 20px #ff0,
+				0 0 40px #ff0,
+				0 0 60px #ff0,
+				0 0 80px #ff0,
+				0 0 100px #ff0,
+				0 0 0 5px rgba(255,255,0,.1)				
+}
+
+.loader .face.face2 .circle:before{
+	background-color: #03a9f4;
+	box-shadow: 0 0 20px #03a9f4,
+				0 0 40px #03a9f4,
+				0 0 60px #03a9f4,
+				0 0 80px #03a9f4,
+				0 0 100px #03a9f4,
+				0 0 0 5px rgba(3,169,234,.1)				
+}
+
+@keyframes animate{
+	0%{
+		transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+@media screen and (max-width:550px) {    
+    ul{
+        gap: 5vw;
+    }
+    .hero__title h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:450px) {    
+    .hero__title h2{
+        font-size: 8vw;
+    }
+}

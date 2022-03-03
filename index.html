@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/Projects.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <title>Zerpa Code</title>
 </head>
 <body>
                     <!-- header and hero  -->
     <header class="header">    
         <div class="hero">
+            <div class="hero__circle"></div>
             <div class="hero__container">
                 <div class="hero__title">
                     <h2>Hello, I'm Jorge</h2>
@@ -32,7 +37,7 @@
                     </div>
                 </div>
 
-                <button class="hero__button">Get Started</button>
+                <button class="hero__button" id="hero__button">Get Started</button>
 
                 <ul>
                     <li>About</li>
@@ -46,12 +51,24 @@
 
 
     <main>
-        <section class=" about">
+        <section class=" about" id="about">
+            <canvas id="canvas1" style="
+			position: absolute;
+			background: none;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+            z-index: 1000;
+	        "></canvas>
+
           <div class="about__card">
               <div class="about__card_text">
                   <h3>About</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos reiciendis optio libero amet nam consectetur labore in minus ex laudantium quisquam, impedit ullam, tenetur expedita, natus quo id. Nostrum, perspiciatis.</p>
-              </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sint consequuntur, harum earum eveniet ratione consectetur! Voluptatem molestiae cum sunt nostrum iste quaerat, exercitationem cupiditate maxime esse similique tempora distinctio? 
+                </p>
+                </div>
               <div class="about__card_image">
                   <div class="about__card_image-container">
                       <img src="./assets/images/portrait.jpg" >
@@ -59,6 +76,7 @@
               </div>
           </div>
 
+                        <h2>SKILLS</h2>
                 <div class="about__chart">
                     <div class="about__chart_table">
                         <div class="about__chart_data">
@@ -84,87 +102,65 @@
 
         </section>
 
-        <section class="projects">
-                <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
+        <section class="projects" id="projects">
+            <h2 style="min-width: 100vw;margin-bottom: 40px;">My Projects</h2>
+            
+            <div class="projects__card">
+                    <h3>Geritch Restaurant Landing Page</h3>
+                    <p>Landing Page template for an elegant Restaurant on Germany</p>
+                    <p>Tegnologies: HTML, CSS, JAVASCRIPT, React JS </p>
                     <button>View Project</button>
                 </div>
                 
                 <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
+                    <h3>3D Library</h3>
+                    <p>Tegnological Books Library, with actualized Data get from IT books API.
+                        This project prioritize css 3D ilustrations and animations.
+                    </p>
+                    <p>Tegnologies: HTML, CSS, JAVASCRIPT, React JS, Material-ui, IT-books-API</p>
                     <button>View Project</button>
                 </div>
                 
                 <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
-                    <button>View Project</button>
+                    <h3>Photografer Portfolio</h3>
+                    <p>photographer Portfolio Template, with some animations on scroll</p>
+                    <p>Tegnologies: HTML, CSS, JAVASCRIPT</p>
+                    <button ><a href=""> View Project </a></button>
                 </div>
-        
+                
                 <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
+                    <h3>Height Predictor</h3>
+                    <p>Use Trigonometry Basics for get an stimated of the height of an object <br>
+                        How it works? <br> 1.Introduce the distance to the object <br> 2.Put the phone on a 90deg angle in relation to the floor <br> 3. Move the indicator line from the bottom to the top of the object to measure.
+                    </p>
+                    <p>Tegnologies: HTML, CSS, JAVASCRIPT and built in js userMedia API</p>
                     <button>View Project</button>
                 </div>
                 
                 <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
+                    <h3>CSS and Canvas Art</h3>
+                    <p>3D, ilustrations, draws, Interactive animations, particle rains...with simply css and js, what means that is possible add to a web page ANY of this animations, WITHOUT lose page speed and functionality</p>
+                    <p>Tegnologies: HTML, CSS, JAVASCRIPT</p>
                     <button>View Project</button>
                 </div>
                 
                 <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
-                    <button>View Project</button>
-                </div>
-        
-                <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
-                    <button>View Project</button>
-                </div>
-        
-                <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
-                    <button>View Project</button>
-                </div>
-        
-                <div class="projects__card">
-                    <h3>Name Project</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corrupti nisi, officiis velit rem tenetur labore</p>
+                    <h3>Parallax Basic Page</h3>
+                    <p>Basic parallax web page ready to be modified to the clients requirmets as fast as posible</p>
+                    <p>Tegnologies: HTML, CSS, JAVASCRIPT</p>
                     <button>View Project</button>
                 </div>
         
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2>Contact with me</h2>
             <p>mail: jorgezerpacoder@gmail.com</p>
             <p>Whatsapp: +584126436269</p>
         </section>
     </main>
-
-
-
-
-
-
-    <!-- button filter -->
-	<svg>
-		<defs>
-			<filter id="wave">
-	<feTurbulence type='fractalNoise' baseFrequency='0.00001 0.00001' numOctaves='1' result='wrap' />
-
-	<feDisplacementMap xChannelSelector='R' xChannelSelector='G' scale='30' in='SourceGraphic' in2='warpOffset' />
-			</filter>
-		</defs>
-	</svg>
     
     <script src="./js/index.js"></script>
-    <!-- <script src="./js/hero-canvas.js"></script> -->
+    <script src="./js/hero-canvas.js"></script>
 </body>
 </html>

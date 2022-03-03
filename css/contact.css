@@ -1,0 +1,11 @@
+        /* contact */
+        .contact{
+            background-color: #0C0A22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        
