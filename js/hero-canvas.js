@@ -4,7 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const Particles_array =[];
 let hue = 0;
-let n_particles = 3;
+let n_particles = 1;
 
 
 			//avoid stretching
@@ -30,8 +30,8 @@ class Particle {
 		this.x= mouse.x;
 		this.y= mouse.y;
 		this.size = Math.random() * 15+1;
-		this.speedX = Math.random() * 3 -1.5; //random btw 1.5 and -1.5
-		this.speedY = Math.random() * 3 -1.5;
+		this.speedX = Math.random() * 2 -1.5; //random btw 1.5 and -1.5
+		this.speedY = Math.random() * 2 -1.5;
 		this.color = `hsl(${hue}, 100%, 50%)`;
 	}
 	

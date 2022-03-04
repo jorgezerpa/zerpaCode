@@ -2,7 +2,6 @@
 
 const chart = document.querySelectorAll('.about__chart_data>span');
 
-console.log(chart)
 const displayAnimations = (entries, observer)=>{
     entries.forEach((entrie, i)=>{
         if(entrie.isIntersecting){
@@ -23,10 +22,22 @@ chart.forEach(bar=>{
 })
 
 // --------------------------------------------------
+            //sections
 let about = document.getElementById("about");
+let projects = document.getElementById("projects");
+let contact = document.getElementById("contact");
+
+            // buttona
 let hero_btn = document.getElementById("hero__button");
+let about_menu_btn = document.getElementById("menu__item_about");
+let projects_menu_btn = document.getElementById("menu__item_projects");
+let contact_menu_btn = document.getElementById("menu__item_contact");
+
 
 hero_btn.addEventListener("click", ()=>scroll(about));
+about_menu_btn.addEventListener("click", ()=>scroll(about));
+projects_menu_btn.addEventListener("click", ()=>scroll(projects));
+contact_menu_btn.addEventListener("click", ()=>scroll(contact));
 
 function scroll(element){
     element.scrollIntoView({behavior: 'smooth'});

@@ -19,13 +19,17 @@
     margin-right: 40px ;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     gap: 50px;
     flex-direction: column;
+}
+.projects__card img{
+    width: 150px;
 }
 
 @media screen and (max-width: 450px) {
     .projects__card{
         width: 70vw;
-        margin-bottom: 70px;
+        margin-bottom: 100px;
     }
 }
